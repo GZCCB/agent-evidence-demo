@@ -1,50 +1,99 @@
 # Agent Evidence Demo
 
-A runnable local demo for showing real AI workflow usage in a professional way.
+A lightweight, runnable AI workflow demo for generating real project evidence.
 
-This project is designed for people who need credible materials for applications, portfolios, GitHub repositories, or product demos. Instead of generating fake screenshots, it creates a real local workflow that:
+This repository turns raw project notes into structured outputs that look professional and are easy to verify. Instead of relying on fabricated screenshots or vague claims, it produces a real local workflow with visible inputs, consistent outputs, and reusable artifacts.
 
-- accepts raw project notes, standup notes, or ticket summaries
-- extracts a concise summary, action items, and risk signals
-- writes a machine-readable JSON artifact
-- writes a terminal-style log file
-- writes a polished Markdown report for sharing
+## Overview
 
-## Why this project exists
+The demo simulates an operator-assist or delivery-support agent. A user pastes project notes, standup updates, ticket summaries, or internal workflow text, and the system:
 
-Many "AI proof" requests ask for something tangible: a GitHub repo, a local workflow, screenshots of a running tool, or a short demo video. This repository gives you a truthful foundation you can run locally and present professionally.
+- classifies the input at a high level
+- extracts a short summary
+- identifies action items
+- flags risk-related language
+- writes persistent JSON, log, and Markdown artifacts
 
-## Features
+The result is a small but credible project that is useful for:
 
-- Zero-dependency Node.js server
-- Browser UI for paste-and-run demos
-- CLI script for generating logs and reports quickly
-- Persistent artifacts in `runs/` and `reports/`
-- Good fit for screenshots, screen recordings, and README-based project presentation
+- GitHub portfolio presentation
+- AI application forms that ask for project proof
+- screenshot and screen-recording evidence
+- showing understanding of agent workflow design
+
+## Why this project is useful
+
+Many evaluation or grant forms ask for supporting material such as:
+
+- GitHub project links
+- product demos
+- workflow screenshots
+- terminal logs
+- concrete examples of AI-driven delivery
+
+This project provides those materials in a truthful way. It is intentionally simple enough to run locally in minutes, while still showing the shape of a real AI workflow pipeline.
+
+## Core features
+
+- Zero-dependency Node.js implementation
+- Browser-based demo page for paste-and-run usage
+- CLI workflow for fast artifact generation
+- Automatic creation of structured run outputs
+- Clean repository shape for portfolio and review use
+
+## Workflow
+
+1. Accept free-form project text.
+2. Detect key themes and likely project type.
+3. Extract summary sentences, actions, and risk signals.
+4. Save the results as reusable artifacts for review or sharing.
+
+## Generated artifacts
+
+Each run writes three output files:
+
+- `runs/run-...json`: structured machine-readable result
+- `runs/run-...log`: terminal-style execution log
+- `reports/run-...md`: presentation-friendly Markdown report
+
+These artifacts are helpful because they create a visible bridge between:
+
+- source input
+- workflow processing
+- reviewable output
 
 ## Quick start
 
 Requirements:
 
-- Node.js 18+ recommended
+- Node.js 18+
 
-Run the web demo:
+Start the web demo:
 
 ```bash
 npm start
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:3000
 ```
 
-Run the CLI demo and generate artifacts immediately:
+Run the CLI version:
 
 ```bash
 npm run demo
 ```
+
+## Suggested demo flow
+
+1. Start the app with `npm start`.
+2. Open `http://localhost:3000`.
+3. Click `Load Sample`.
+4. Click `Run Analysis`.
+5. Open the generated files in `runs/` and `reports/`.
+6. Capture screenshots of the UI and the generated artifacts.
 
 ## Project structure
 
@@ -64,38 +113,31 @@ npm run demo
 `-- server.js
 ```
 
-## What gets generated
+## Positioning
 
-After a run, the project writes:
+This repository is not a full production agent platform. It is a compact, presentation-ready demo that emphasizes:
 
-- `runs/run-...json`: structured workflow output
-- `runs/run-...log`: terminal-like execution log
-- `reports/run-...md`: readable report
+- workflow clarity
+- observable outputs
+- reproducibility
+- portfolio usefulness
 
-These files are intentionally useful for:
+It can later be extended with:
 
-- GitHub repository evidence
-- local screenshots
-- demo videos
-- portfolio writeups
-- application forms that ask for project proof
+- real LLM API calls
+- approval steps
+- multi-agent coordination
+- external data sources
+- dashboards or evaluation metrics
 
-## Suggested demo flow
+## Submission-ready description
 
-1. Run `npm start`
-2. Click `Load Sample`
-3. Click `Run Analysis`
-4. Open the generated `runs/` and `reports/` files
-5. Capture screenshots of the page plus the generated logs
+You can reuse or adapt this text:
 
-## Submission-ready project description
-
-You can adapt the following text when describing the project:
-
-> I built a lightweight local agent workflow demo that turns messy project notes into structured outputs such as summaries, action items, risk flags, and reusable reports. The workflow simulates the kind of operator-assist automation used in internal support and delivery teams. It includes a browser interface for live demonstrations and a CLI mode that generates timestamped logs and Markdown artifacts, which makes the system easy to verify, review, and present in a portfolio or evaluation process.
+> I built a runnable local agent workflow demo that converts raw project notes into structured outputs such as summaries, action items, risk flags, and reusable reports. The project is designed to simulate the kind of operator-assist automation used in delivery and internal support scenarios. It includes a browser-based interface for demonstrations and a CLI mode that generates timestamped logs and Markdown artifacts, making the workflow easy to verify, review, and present as a real AI-driven project.
 
 ## Notes
 
-- This project does not depend on external APIs, so it can run offline.
-- You can later connect it to OpenAI, Claude, or another model provider if you want a stronger production story.
-- Generated logs are ignored by Git through `.gitignore`, which keeps the repository clean.
+- The current version runs locally without external API dependencies.
+- Generated run artifacts are ignored by Git through `.gitignore`.
+- The repository is intended to be easy to demo, explain, and extend.
