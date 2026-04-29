@@ -1,0 +1,17 @@
+{
+  "name": "agent-evidence-demo",
+  "version": "1.0.0",
+  "description": "A runnable local AI workflow demo for portfolio and application evidence.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node scripts/run-demo.js"
+  },
+  "keywords": [
+    "agent",
+    "ai",
+    "demo",
+    "workflow"
+  ],
+  "license": "MIT"
+}

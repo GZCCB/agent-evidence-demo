@@ -1,0 +1,21 @@
+Project: Internal support workflow assistant for a 12-person operations team.
+
+Core pain point:
+The team receives repetitive requests through email, chat, and spreadsheets. Operators spend too much time classifying tickets, copying context, and writing status updates. That makes response times inconsistent and creates delivery risk whenever the queue spikes.
+
+Current workflow:
+1. Collect incoming requests from multiple channels and normalize them into a shared queue.
+2. Generate a short summary for each request so the next operator can understand it quickly.
+3. Extract action items, owners, deadlines, and possible blocker signals.
+4. Flag items that mention missing data, API error, deployment risk, or timeline delay.
+5. Produce a review note for the team lead before daily standup.
+
+Observations from this week:
+- Two requests were delayed because the owner field was missing.
+- One backend API error created duplicate follow-up work.
+- The team wants a clearer launch checklist before release.
+- Next step: connect the workflow to the internal knowledge base and track latency.
+- Action: create a lightweight dashboard for delivery metrics and token usage.
+
+Impact:
+The prototype reduced manual triage time during testing and gave the team a consistent format for reviews. The next milestone is to connect the workflow to a real model endpoint and add approval gates for sensitive requests.

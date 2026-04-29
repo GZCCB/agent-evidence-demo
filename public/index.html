@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Evidence Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <p class="eyebrow">Real workflow, real logs, portfolio-ready proof</p>
+        <h1>Agent Evidence Demo</h1>
+        <p class="hero-copy">
+          A lightweight local demo that turns messy project notes into a structured summary, action items, risks, and downloadable run artifacts.
+        </p>
+        <div class="hero-actions">
+          <button id="load-sample" class="ghost">Load Sample</button>
+          <button id="run-analysis" class="primary">Run Analysis</button>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="panel input-panel">
+          <div class="panel-head">
+            <h2>Source Notes</h2>
+            <span>Paste standup notes, ticket summaries, or project updates</span>
+          </div>
+          <textarea id="source-text" placeholder="Paste your project notes here..."></textarea>
+        </div>
+
+        <div class="panel output-panel">
+          <div class="panel-head">
+            <h2>Workflow Output</h2>
+            <span>Generated summary, action items, risk scan, and artifact paths</span>
+          </div>
+          <div id="status" class="status">Waiting for input.</div>
+          <div class="results-grid">
+            <article class="result-card">
+              <h3>Summary</h3>
+              <ul id="summary-list"></ul>
+            </article>
+            <article class="result-card">
+              <h3>Action Items</h3>
+              <ul id="action-list"></ul>
+            </article>
+            <article class="result-card">
+              <h3>Risks</h3>
+              <ul id="risk-list"></ul>
+            </article>
+            <article class="result-card">
+              <h3>Artifacts</h3>
+              <ul id="artifact-list"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
